@@ -1,0 +1,153 @@
+
+
+body {
+    background-color: $color-lightgrey;
+}
+
+.home {
+    font-family: $sans;
+    min-height: calc(100vh - 90px);
+    @media screen and (min-width: $bp-md) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+        grid-gap: 5rem;
+        .picture {
+            order: -1;
+            max-width: 750px;
+        }
+    }
+    &__box {
+        max-width: 650px;
+        &__name {
+            font-weight: bold;
+            font-size: 20px;
+            color: $color-darkgrey;
+        }
+    }
+}
+
+.secondary {
+    background-color: $color-blacky;
+    color: $color-white;
+    @media screen and (min-width: $bp-md) {
+        display: grid;
+        justify-content: space-between;
+        justify-items: center;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        grid-gap: 5rem;
+        .picture {
+            
+        }
+    }
+}
+
+.tertiary {
+    display: grid;
+    justify-items: center;
+    min-height: 100vh;
+    &__heading {
+        align-self: end;
+        margin-bottom: 5rem;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__picture {
+        max-width: 25rem;
+    }
+    &__name {
+        color: $color-black;
+        font-family: $sans;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    &__box {
+        width: 17.5rem;
+        
+        background-color: $color-white;
+        box-shadow: 0 20px 80px rgba(0,0,0, .5);
+        @media screen and (min-width: $bp-md) {
+            display: flex;
+            width: 50rem;
+            height: 25rem;
+        }
+        
+        &__cta {
+            font-family: $sans;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-darkgrey;
+            font-weight: bold;
+        }
+        &__text {
+            padding: 2rem;
+            @media screen and (min-width: $bp-md) {
+                padding: 3rem;
+            }
+            .para {
+                margin-bottom: 1rem;
+                font-size: .9rem;
+                @media screen and (min-width: $bp-md) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    
+
+    &__para {
+        color: $color-darkgrey;
+    }
+}
+
+.quaternary {
+    background-color: $color-blacky;
+    color: $color-white;
+    &__para {
+        max-width: 40ch;
+    }
+    &__lists {
+        display: flex;
+        margin: 1rem 0;
+        li {
+            
+            margin-left: 1rem;
+        }
+        .quaternary__list {
+            &--1 {
+                li {
+                    list-style-type: square;
+                }
+            }
+            &--2 {
+                margin-left: 2rem;
+            }
+        }
+    }
+    @media screen and (min-width: $bp-md) {
+        display: grid;
+        justify-content: space-between;
+        justify-items: center;
+        grid-template-columns: 50% 50%;
+        grid-gap: 5rem;
+        align-items: center;
+        .illustration {
+            display: block;
+        }
+        .container {
+            justify-self: start;
+        }
+    }
+
+    li, p {
+        color: $color-lightgrey;
+    }
+    &__illustration {
+        display: none;   
+    }
+}

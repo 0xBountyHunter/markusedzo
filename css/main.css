@@ -1,0 +1,432 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CSS RESET ---------------- */
+/* COMMENTS ---------------- */
+/* section margins: 100px-200px, section min-height: 60vh
+  full page - grid layout header margin-bototm: 40px */
+/* Fonts */
+.para {
+  max-width: 60ch;
+}
+
+.header {
+  height: 90px;
+  background-color: #12120E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header__nav {
+  margin: 0 auto;
+}
+
+.header__nav--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1366px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav__logo {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.header__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav__list__item {
+  color: #fff;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  font-size: .8rem;
+}
+
+.header__nav__list__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.heading {
+  font-size: 50px;
+  line-height: 1;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .heading {
+    font-size: 64px;
+  }
+}
+
+.para, li {
+  color: #eee;
+}
+
+@media screen and (min-width: 1024px) {
+  .para, li {
+    font-size: 1.1rem;
+  }
+}
+
+.cta:link, .cta:visited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  width: 260px;
+  height: 65px;
+  background-color: #D90429;
+  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.cta:hover, .cta:active {
+  background-color: #12120E;
+}
+
+section {
+  padding: 7rem 5vw;
+  min-height: 60vh;
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.picture {
+  display: block;
+  max-width: 500px;
+}
+
+.illustration {
+  margin-top: 2.5rem;
+}
+
+body {
+  background-color: #eee;
+}
+
+.home {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: calc(100vh - 90px);
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    justify-items: center;
+    grid-gap: 5rem;
+  }
+  .home .picture {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    max-width: 750px;
+  }
+}
+
+.home__box {
+  max-width: 650px;
+}
+
+.home__box__name {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+.secondary {
+  background-color: #12120E;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .secondary {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    justify-items: center;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 5rem;
+  }
+}
+
+.tertiary {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  min-height: 100vh;
+}
+
+.tertiary__heading {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: 5rem;
+}
+
+.tertiary__img {
+  width: 100%;
+}
+
+.tertiary__picture {
+  max-width: 25rem;
+}
+
+.tertiary__name {
+  color: #000;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.tertiary__box {
+  width: 17.5rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1024px) {
+  .tertiary__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50rem;
+    height: 25rem;
+  }
+}
+
+.tertiary__box__cta {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.tertiary__box__text {
+  padding: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .tertiary__box__text {
+    padding: 3rem;
+  }
+}
+
+.tertiary__box__text .para {
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .tertiary__box__text .para {
+    font-size: 1rem;
+  }
+}
+
+.tertiary__para {
+  color: #333;
+}
+
+.quaternary {
+  background-color: #12120E;
+  color: #fff;
+}
+
+.quaternary__para {
+  max-width: 40ch;
+}
+
+.quaternary__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.quaternary__lists li {
+  margin-left: 1rem;
+}
+
+.quaternary__lists .quaternary__list--1 li {
+  list-style-type: square;
+}
+
+.quaternary__lists .quaternary__list--2 {
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .quaternary {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    justify-items: center;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    grid-gap: 5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .quaternary .illustration {
+    display: block;
+  }
+  .quaternary .container {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
+.quaternary li, .quaternary p {
+  color: #eee;
+}
+
+.quaternary__illustration {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

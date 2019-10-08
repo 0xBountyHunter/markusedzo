@@ -1,0 +1,120 @@
+
+$font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$serif: 'Merriweather', $font-serif;
+$sans: 'Raleway', $font-sans;
+
+$text-md: 20px;
+$text-big: 32px;
+$text-heading-sm: 50px;
+$text-heading-md: 64px;
+
+$section-margin-sm: 100px; 
+$section-margin-md: 200px;
+$header-margin: 40px;
+
+$color-main: #D90429;
+$color-blacky: #12120E;
+$color-black: #000;
+$color-darkgrey: #333;
+$color-grey: #ccc;
+$color-lightgrey: #eee;
+$color-white: #fff;
+
+$measure: 60ch;
+$bp-md: 1024px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: $font-serif;
+}
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* CSS RESET ---------------- */
+
+/* COMMENTS ---------------- */
+
+/* section margins: 100px-200px, section min-height: 60vh
+  full page - grid layout header margin-bototm: 40px */
+
+/* Fonts */
+
+.para {
+    max-width: $measure;
+}
