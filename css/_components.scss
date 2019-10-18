@@ -109,6 +109,9 @@ section {
 .wrapper {
     display: block;
     max-width: 1366px;
+    @media only screen and (min-width: $bp-md) {
+        padding: 2rem;
+    }
 }
 
 .container {

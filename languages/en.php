@@ -4,7 +4,7 @@
         "logo" => "Márkus trainer",
         "eng" => "eng",
         "hun" => "Hun",
-        "about" => "about me",
+        "about" => "about",
         "coaching" => "coaching",
         "contact" => "contact",
         "name" => "Márkus Imre",

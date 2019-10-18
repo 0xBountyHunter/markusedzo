@@ -104,9 +104,9 @@
         <section class="contact section" id="contact">
             <div class="wrapper">
                 <h2 class="contact__heading heading"><?php echo $lang['qui-header']?></h2>
-                <a class="contact__link text-big" href="tel:+36703691271"><img class="contact__icon" src="img/icons/phone.svg" alt="Telephone icon">+36 70 369 1271</a>
-                <a class="contact__link text-big" href="mailto:markustraining21@gmail.com"><img class="contact__icon" src="img/icons/email.svg" alt="Email icon">markustraining21@gmail.com</a>
-                <a class="contact__link text-big" href="https://www.facebook.com/markusedzogyor" target="_blank"><img class="contact__icon" src="img/icons/facebook.svg" alt="Facebook icon">markusedzogyor</a>
+                <a class="contact__link text-big" href="tel:+36703691271"><!-- <img class="contact__icon" src="img/icons/phone.svg" alt="Telephone icon"> -->+36 70 369 1271</a>
+                <a class="contact__link text-big" href="mailto:markustraining21@gmail.com"><!-- <img class="contact__icon" src="img/icons/email.svg" alt="Email icon"> -->markustraining21@gmail.com</a>
+                <a class="contact__link text-big" href="https://www.facebook.com/markusedzogyor" target="_blank"><!-- <img class="contact__icon" src="img/icons/facebook.svg" alt="Facebook icon"> -->markusedzogyor</a>
             </div>
         </section>
 
