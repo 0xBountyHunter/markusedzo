@@ -20,7 +20,7 @@
             <a href="#top" class="header__nav__logo text-md"><?php echo $lang['logo']?></a>
             <ul class="header__nav__list">
                 <li class="header__nav__list__item"><a class="header__nav__list__link" href="index.php?lang=en"><?php echo $lang['eng'] ?></a>&nbsp;|&nbsp;<a class="header__nav__list__link" href="index.php?lang=hu"><?php echo $lang['hun']?></a></li>
-                <li class="header__nav__list__item"><a class="header__nav__list__link" href="#pricing"><?php echo $lang['coaching']?></a></li>
+                <li class="header__nav__list__item"><a class="header__nav__list__link" href="#about"><?php echo $lang['about']?></a></li>
                 <li class="header__nav__list__item"><a class="header__nav__list__link" href="#contact"><?php echo $lang['contact']?></a></li>
             </ul>
             </div>
@@ -35,20 +35,20 @@
                 </div>
                 <a href="#about" class="home__cta cta"><?php echo $lang['cta']?></a>
             </div>
-            <picture class="picture">
-                <img class="home__illustration illustration" src="img/illustrasions/working_out.svg" alt="Illustration about working out. Source from unDraw.com">
-            </picture>
+            
         </section>
-        <section class="secondary section" id="about">
-            <div class="container"  data-aos="fade-in">
-                <h2 class="secondary__heading heading"><?php echo $lang['sec-header']?></h2>
-                <p class="secondary__para para"><?php echo $lang['sec-para']?></p>
+        <section class="secondary section" id="secondary">
+            <div class="wrapper">
+                <div class="container"  data-aos="fade-in">
+                    <h2 class="secondary__heading heading"><?php echo $lang['sec-header']?></h2>
+                    <p class="secondary__para para"><?php echo $lang['sec-para']?></p>
+                </div>
+                <picture class="picture">
+                    <img class="secondary__illustration illustration" src="img/illustrasions/healthy_habit.svg" alt="Illustration about working out. Source from unDraw.com">
+                </picture>
             </div>
-            <picture class="picture">
-                <img class="secondary__illustration illustration" src="img/illustrasions/healthy_habit.svg" alt="Illustration about working out. Source from unDraw.com">
-            </picture>
         </section>
-        <section class="tertiary section">
+        <section class="tertiary section" id="about">
             <h2 class="tertiary__heading heading"><?php echo $lang['ter-header']?></h2>
             <div class="tertiary__box">
                 <picture class="picture tertiary__picture">
@@ -57,11 +57,26 @@
                 <div class="tertiary__box__text">
                     <p class="tertiary__name">Imre Márkus</p>
                     <p class="tertiary__para para"><?php echo $lang['ter-para']?></p>
-                    <a href="#" class="tertiary__box__cta"><?php echo $lang['read']?></a>
+                    <a href="#popup" class="tertiary__box__cta"><?php echo $lang['read']?></a>
                 </div>
             </div>
+
+            <div class="popup" id="popup">
+                <div class="popup__content">
+                    <div class="popup__left">
+                        <img class="popup__img" src="img/pictures/before-after.jpg" alt="A picture about Márkus's transformation">
+                    </div>
+                    <div class="popup__right">
+                        <a href="#about" class="popup__close">&times;</a>
+                        <h2 class="heading popup__heading"><?php echo $lang['transformation']?></h2>
+                        <p class="popup__para para"><?php echo $lang['transformation-para']?></p>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <section class="quaternary section" id="pricing">
+            <div class="wrapper">
             <picture class="picture">
                 <img class="quaternary__illustration illustration" src="img/illustrasions/credit_card.svg" alt="Illustration about paying with credit card. Source from unDraw.com">
             </picture>
@@ -84,13 +99,17 @@
             </div>
             <p  class="quaternary__info"><?php echo $lang['sale']?></p>
             </div>
+            </div>
         </section>
         <section class="contact section" id="contact">
+            <div class="wrapper">
                 <h2 class="contact__heading heading"><?php echo $lang['qui-header']?></h2>
-                <a class="contact__link text-big" href="tel:+36703691271" class="tel">+36703691271</a>
-                <a class="contact__link text-big" href="mailto:markustraining21@gmail.com" class="email">markustraining21@gmail.com</a>
-                <a class="contact__link text-big" href="https://www.facebook.com/markusedzogyor" target="_blank"><img class="fb-img" src="img/facebook.svg">markusedzogyor</a>
+                <a class="contact__link text-big" href="tel:+36703691271"><img class="contact__icon" src="img/icons/phone.svg" alt="Telephone icon">+36 70 369 1271</a>
+                <a class="contact__link text-big" href="mailto:markustraining21@gmail.com"><img class="contact__icon" src="img/icons/email.svg" alt="Email icon">markustraining21@gmail.com</a>
+                <a class="contact__link text-big" href="https://www.facebook.com/markusedzogyor" target="_blank"><img class="contact__icon" src="img/icons/facebook.svg" alt="Facebook icon">markusedzogyor</a>
+            </div>
         </section>
+
     </main>
     <footer class="footer">
         <p class="footer__copyright"><?php echo $lang['footer'] ?></p>

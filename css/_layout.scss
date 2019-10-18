@@ -4,27 +4,29 @@ body {
     background-color: $color-lightgrey;
 }
 
+.wrapper {
+    padding: 2rem;
+}
+
 .home {
     font-family: $sans;
     min-height: calc(100vh - 90px);
-    @media screen and (min-width: $bp-md) {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        align-items: center;
-        justify-content: space-between;
-        justify-items: center;
-        grid-gap: 5rem;
-        .picture {
-            order: -1;
-            max-width: 750px;
-        }
-    }
+    background-image: url('../img/pictures/background.jpg');
+    background-size: cover;
+    position: relative;
     &__box {
-        max-width: 650px;
+        max-width: 600px;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        line-height: 1.25;
+        text-shadow: 0 0 50px rgba(0,0,0, 1);
         &__name {
             font-weight: bold;
             font-size: 20px;
-            color: $color-darkgrey;
+            color: $color-lightgrey;
         }
     }
 }
@@ -32,17 +34,18 @@ body {
 .secondary {
     background-color: $color-blacky;
     color: $color-white;
-    @media screen and (min-width: $bp-md) {
-        display: grid;
-        justify-content: space-between;
-        justify-items: center;
-        grid-template-columns: 50% 50%;
-        align-items: center;
-        grid-gap: 5rem;
-        .picture {
-            
+    .wrapper {
+        @media screen and (min-width: $bp-md) {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            align-items: center;
+            width: 100%;
+            .illustration {
+                justify-self: end;
+            }
         }
     }
+    
 }
 
 .tertiary {
@@ -51,7 +54,7 @@ body {
     min-height: 100vh;
     &__heading {
         align-self: end;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
     }
     &__img {
         width: 100%;
@@ -78,11 +81,30 @@ body {
         }
         
         &__cta {
-            font-family: $sans;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $color-darkgrey;
-            font-weight: bold;
+            &:link, &:visited {
+                font-family: $sans;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-darkgrey;
+                font-weight: bold;
+                position: relative;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: $color-darkgrey;
+                transform-origin: bottom left;
+                transition: transform .25s ease-out;
+            }
+            &:hover::before {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
         }
         &__text {
             padding: 2rem;
@@ -92,9 +114,6 @@ body {
             .para {
                 margin-bottom: 1rem;
                 font-size: .9rem;
-                @media screen and (min-width: $bp-md) {
-                    font-size: 1rem;
-                }
             }
         }
     }
@@ -102,6 +121,87 @@ body {
 
     &__para {
         color: $color-darkgrey;
+    }
+}
+
+.popup {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .7);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visiblity .3s;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    &__close {
+        &:link, &:visited {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            color: $color-black;
+            transition: color .2s;
+            line-height: 1;
+        }
+        &:hover, &:active {
+            color: $color-main;
+        }
+        
+        
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-height: 640px;
+        background-color: $color-white;
+        max-width: $bp-lg;
+        box-shadow: 0 20px 80px rgba(0,0,0, .5);
+        display: table;
+        overflow: hidden;
+        
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        
+    }
+    &__heading {
+        font-size: 2rem;
+    }
+    &__right {
+        display: table-cell;
+        padding: 2rem;
+        width: 50%;
+        vertical-align: middle;
+    }
+    &__left {
+        display: table-cell;
+        width: 50%;
+        max-width: 800px;
+        vertical-align: middle;
+        
+    }
+    &__para {
+        color: $color-darkgrey;
+        font-size: .9rem;
+        column-gap: 2rem;
+        column-count: 2;
+        /* hyphens: auto; */
     }
 }
 
@@ -129,25 +229,73 @@ body {
             }
         }
     }
-    @media screen and (min-width: $bp-md) {
-        display: grid;
-        justify-content: space-between;
-        justify-items: center;
-        grid-template-columns: 50% 50%;
-        grid-gap: 5rem;
-        align-items: center;
-        .illustration {
-            display: block;
-        }
-        .container {
-            justify-self: start;
+    .wrapper {
+        @media screen and (min-width: $bp-md) {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+            width: 100%;
+            .illustration {
+                display: block;
+                justify-self: start;
+            }
+            .container {
+                justify-self: end;
+            }
         }
     }
+    
 
     li, p {
         color: $color-lightgrey;
     }
     &__illustration {
         display: none;   
+    }
+}
+
+.contact {
+    font-family: $font-sans;
+    font-weight: bold;
+    .wrapper {
+        @media screen and (min-width: $bp-md) {
+            display: grid;
+            align-items: center;
+            width: 100%;
+        }
+    }
+    &__link {
+        display: block;
+        &:link, &:visited {
+            text-decoration: none;
+            color: $color-main;
+            transition: color .3s;
+        }
+        &:hover, &:active {
+            color: $color-blacky;
+        }
+        
+        
+    }
+    &__icon {
+
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+
+.footer {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-lightgrey;
+    background-color: $color-blacky;
+}
+
+.text-big {
+    font-size: 1rem;
+    @media only screen and (min-width: $bp-md) {
+        font-size: 2rem;
     }
 }

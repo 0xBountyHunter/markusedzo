@@ -3,7 +3,7 @@
         "title" => "Márkus edző",
         "logo" => "Márkus edző",
         "eng" => "eng",
-        "hun" => "hun",
+        "hun" => "Hun",
         "about" => "rólam",
         "coaching" => "edzések",
         "contact" => "kapcsolat",
@@ -27,5 +27,7 @@
         "sale" => "Első alkalom 50%-al olcsóbb!",
         "qui-header" => "Keress fel!",
         "footer" => "©2019 - Márkus edző - Minden jog fenntartva.",
+        "transformation" => "Az átalakulásom",
+        "transformation-para" => "Az én átalakulásom 2018.01.01-jén kezdődött, mint sok más embernek is, mivel az új év alkalmával sokan megfogadnak sok mindent, amit vagy lehetetlen betartani, vagy nem elég kitartóak hozzá, hogy véghez vigyék akaratukat .A kezdetekben szépen, óvatosan átalakítottam az étrendemet, a meglévő edzőtermi mozgáshoz alakítottam, hogy minimális, vagy nulla legyen az izomveszteség, amit fogyásnál elég nehéz elkerülni. Az első képen 130 kiló körül lehettem, nem vagyok benne biztos, 30% feletti testzsír százalékkal. A második képen viszont 80 kilósan, 10% alatti testzsírszázalékkal büszkén állok a kamera előtt. Mióta sikerült lefogynom, - és persze most már több mint egy éve tartom ezt a 80 kilós súlyt, és még mindig tisztán, tudatosan, egészségesen táplálkozok – megnőtt az önbizalmam, több energiám van, mindent együtt véve sokkal jobban érzem magam. Persze, nem volt könnyű életmódot váltani az elején, de ha megvan az elegendő elhivatottság, kitartás, és motiváció, akkor mindent meg lehet valósítani, amire elhatározod magad."
     );
 ?>

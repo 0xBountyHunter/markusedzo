@@ -141,6 +141,32 @@ select {
 .header__nav__list__link {
   text-decoration: none;
   color: #fff;
+  position: relative;
+}
+
+.header__nav__list__link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+}
+
+.header__nav__list__link:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .heading {
@@ -198,10 +224,21 @@ section {
   min-height: 60vh;
 }
 
+@media screen and (min-width: 1024px) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
 .section {
   display: -ms-grid;
   display: grid;
   justify-items: center;
+}
+
+.wrapper {
+  display: block;
+  max-width: 1366px;
 }
 
 .container {
@@ -210,11 +247,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.wrapper {
-  max-width: 1500px;
-  margin: 0 auto;
 }
 
 .picture {
@@ -230,42 +262,34 @@ body {
   background-color: #eee;
 }
 
+.wrapper {
+  padding: 2rem;
+}
+
 .home {
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   min-height: calc(100vh - 90px);
-}
-
-@media screen and (min-width: 1024px) {
-  .home {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    justify-items: center;
-    grid-gap: 5rem;
-  }
-  .home .picture {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    max-width: 750px;
-  }
+  background-image: url("../img/pictures/background.jpg");
+  background-size: cover;
+  position: relative;
 }
 
 .home__box {
-  max-width: 650px;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 0 0 50px black;
 }
 
 .home__box__name {
   font-weight: bold;
   font-size: 20px;
-  color: #333;
+  color: #eee;
 }
 
 .secondary {
@@ -274,19 +298,19 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .secondary {
+  .secondary .wrapper {
     display: -ms-grid;
     display: grid;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    justify-items: center;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    grid-gap: 5rem;
+    width: 100%;
+  }
+  .secondary .wrapper .illustration {
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
@@ -301,7 +325,7 @@ body {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .tertiary__img {
@@ -337,12 +361,38 @@ body {
   }
 }
 
-.tertiary__box__cta {
+.tertiary__box__cta:link, .tertiary__box__cta:visited {
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  position: relative;
+}
+
+.tertiary__box__cta::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #333;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+}
+
+.tertiary__box__cta:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .tertiary__box__text {
@@ -360,14 +410,92 @@ body {
   font-size: .9rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .tertiary__box__text .para {
-    font-size: 1rem;
-  }
-}
-
 .tertiary__para {
   color: #333;
+}
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visiblity .3s;
+  transition: opacity .3s, visiblity .3s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__close:link, .popup__close:visited {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  line-height: 1;
+}
+
+.popup__close:hover, .popup__close:active {
+  color: #D90429;
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  max-height: 640px;
+  background-color: #fff;
+  max-width: 1366px;
+  -webkit-box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+  display: table;
+  overflow: hidden;
+}
+
+.popup__img {
+  display: block;
+  width: 100%;
+}
+
+.popup__heading {
+  font-size: 2rem;
+}
+
+.popup__right {
+  display: table-cell;
+  padding: 2rem;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.popup__left {
+  display: table-cell;
+  width: 50%;
+  max-width: 800px;
+  vertical-align: middle;
+}
+
+.popup__para {
+  color: #333;
+  font-size: .9rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  -webkit-column-count: 2;
+          column-count: 2;
+  /* hyphens: auto; */
 }
 
 .quaternary {
@@ -399,26 +527,24 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .quaternary {
+  .quaternary .wrapper {
     display: -ms-grid;
     display: grid;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    justify-items: center;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-    grid-gap: 5rem;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
-  .quaternary .illustration {
+  .quaternary .wrapper .illustration {
     display: block;
-  }
-  .quaternary .container {
     -ms-grid-column-align: start;
         justify-self: start;
+  }
+  .quaternary .wrapper .container {
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
@@ -428,5 +554,66 @@ body {
 
 .quaternary__illustration {
   display: none;
+}
+
+.contact {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
+.contact__link {
+  display: block;
+}
+
+.contact__link:link, .contact__link:visited {
+  text-decoration: none;
+  color: #D90429;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.contact__link:hover, .contact__link:active {
+  color: #12120E;
+}
+
+.contact__icon {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #eee;
+  background-color: #12120E;
+}
+
+.text-big {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .text-big {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

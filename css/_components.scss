@@ -32,6 +32,23 @@
             &__link {
                 text-decoration: none;
                 color: $color-white;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: $color-white;
+                    transform-origin: bottom left;
+                    transition: transform .25s ease-out;
+                }
+                &:hover::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
             }
         }
 
@@ -79,6 +96,9 @@
 section {
     padding: 7rem 5vw;
     min-height: 60vh;
+    @media screen and (min-width: $bp-md) {
+        padding: 7rem 0;
+    }
 }
 
 .section {
@@ -86,14 +106,14 @@ section {
     justify-items: center;
 }
 
+.wrapper {
+    display: block;
+    max-width: 1366px;
+}
+
 .container {
     display: grid;
     align-items: center;
-}
-
-.wrapper {
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 .picture {
