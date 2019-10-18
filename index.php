@@ -33,7 +33,7 @@
                     <p class="home__box__name"><?php echo $lang['name']?></p>
                     <h1 class="home__box__heading heading"><?php echo $lang['home-header']?></h1>
                 </div>
-                <a href="#about" class="home__cta cta"><?php echo $lang['cta']?></a>
+                <a href="#secondary" class="home__cta cta"><?php echo $lang['cta']?></a>
             </div>
             
         </section>
