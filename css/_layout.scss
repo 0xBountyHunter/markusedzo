@@ -57,6 +57,7 @@ body {
     &__img {
         display: block;
         width: 100%;
+        height: 100%;
     }
     &__picture {
         max-width: 400px;
@@ -70,20 +71,17 @@ body {
     }
     &__box {
         width: 17.5rem;
-        
         background-color: $color-white;
         box-shadow: 0 20px 80px rgba(0,0,0, .5);
         @media screen and (min-width: $bp-md) {
             display: flex;
             width: 50rem;
-            height: 25rem;
+            max-height: 25rem;
+            height: auto;
         }
         
         &__cta {
-            display: none;
-            @media only screen and (min-width: $bp-md) {
-                display: inline-block;
-            }
+            display: inline-block;
             &:link, &:visited {
                 font-family: $sans;
                 text-transform: uppercase;
@@ -138,6 +136,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visiblity .3s;
+    
 
     &:target {
         opacity: 1;
@@ -168,44 +167,46 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;
         max-height: 640px;
+        width: 90%;
         background-color: $color-white;
         max-width: $bp-lg;
         box-shadow: 0 20px 80px rgba(0,0,0, .5);
-        display: table;
-        overflow: hidden;
+        display: grid;
+        overflow: scroll;
         
+        @media screen and (min-width: $bp-sm) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
-        
     }
     &__heading {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     &__right {
-        display: table-cell;
         padding: 2rem;
-        width: 50%;
-        vertical-align: middle;
+
     }
     &__left {
-        display: table-cell;
-        width: 50%;
-        max-width: 800px;
-        vertical-align: middle;
-        
+        display: grid;
+        justify-content: center;
+        align-content: center;
     }
     &__para {
         color: $color-darkgrey;
-        font-size: .9rem;
+        font-size: .95rem;
         column-gap: 2rem;
-        column-count: 2;
-        /* hyphens: auto; */
+        column-count: 1;
+        hyphens: auto;
+        @media screen and (min-width: $bp-lg) {
+            column-count: 2;
+        }
     }
+
 }
 
 .quaternary {

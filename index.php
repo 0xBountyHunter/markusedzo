@@ -44,7 +44,7 @@
                     <p class="secondary__para para"><?php echo $lang['sec-para']?></p>
                 </div>
                 <picture class="picture">
-                    <img class="secondary__illustration illustration" src="img/illustrasions/healthy_habit.svg" alt="Illustration about working out. Source from unDraw.com">
+                    <img class="secondary__illustration illustration" loading="lazy" src="img/illustrasions/healthy_habit.svg" alt="Illustration about working out. Source from unDraw.com">
                 </picture>
             </div>
         </section>
@@ -52,7 +52,7 @@
             <h2 class="tertiary__heading heading"><?php echo $lang['ter-header']?></h2>
             <div class="tertiary__box">
                 <picture class="picture tertiary__picture">
-                    <img class="img tertiary__img" src="img/pictures/markus-big.jpg" alt="A picture about me!" class="tertiary__box__img">
+                    <img class="img tertiary__img" loading="lazy" src="img/pictures/markus-big.jpg" alt="A picture about me!" class="tertiary__box__img">
                 </picture>
                 <div class="tertiary__box__text">
                     <p class="tertiary__name">Imre Márkus</p>
@@ -64,7 +64,7 @@
             <div class="popup" id="popup">
                 <div class="popup__content">
                     <div class="popup__left">
-                        <img class="popup__img" src="img/pictures/before-after.jpg" alt="A picture about Márkus's transformation">
+                        <img class="popup__img" loading="lazy" id="transformation-img" src="img/pictures/before-after.jpg" alt="A picture about Márkus's transformation">
                     </div>
                     <div class="popup__right">
                         <a href="#about" class="popup__close">&times;</a>
@@ -78,7 +78,7 @@
         <section class="quaternary section" id="pricing">
             <div class="wrapper">
             <picture class="picture">
-                <img class="quaternary__illustration illustration" src="img/illustrasions/credit_card.svg" alt="Illustration about paying with credit card. Source from unDraw.com">
+                <img class="quaternary__illustration illustration" loading="lazy" src="img/illustrasions/credit_card.svg" alt="Illustration about paying with credit card. Source from unDraw.com">
             </picture>
             <div class="container" data-aos="fade-in">
             <h2 class="quaternary__heading heading"><?php echo $lang['qua-header']?></h2>
