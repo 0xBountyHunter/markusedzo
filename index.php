@@ -12,6 +12,15 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway:400,700&display=swap" rel="stylesheet"> 
     <meta name="description" content="Személyi edzés Győr. Bízd egy profira az alakodat.">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148909087-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148909087-2');
+    </script>
     <title><?php echo $lang['title']?></title>
 </head>
 <body>
