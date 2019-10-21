@@ -61,6 +61,7 @@ body {
     }
     &__picture {
         max-width: 400px;
+        max-height: 400px;
     }
     &__name {
         color: $color-black;
@@ -74,10 +75,11 @@ body {
         background-color: $color-white;
         box-shadow: 0 20px 80px rgba(0,0,0, .5);
         @media screen and (min-width: $bp-md) {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             width: 50rem;
-            max-height: 25rem;
             height: auto;
+            max-height: 25rem;
         }
         
         &__cta {
@@ -276,7 +278,7 @@ body {
             transition: color .3s;
         }
         &:hover, &:active {
-            color: $color-blacky;
+            color: $color-hover;
         }
         
     }

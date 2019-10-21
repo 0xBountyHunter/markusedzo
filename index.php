@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway:400,700&display=swap" rel="stylesheet"> 
     <meta name="description" content="Személyi edzés Győr. Bízd egy profira az alakodat.">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title><?php echo $lang['title']?></title>
 </head>
 <body>
@@ -28,29 +29,29 @@
     </header>
     <main>
         <section class="home section">
-            <div class="home__box" data-aos="fade-up">
-                <div>
+            <div class="home__box">
+                <div data-aos="fade-in">
                     <p class="home__box__name"><?php echo $lang['name']?></p>
                     <h1 class="home__box__heading heading"><?php echo $lang['home-header']?></h1>
                 </div>
-                <a href="#secondary" class="home__cta cta"><?php echo $lang['cta']?></a>
+                <a href="#secondary" data-aos="fade-up" class="home__cta cta"><?php echo $lang['cta']?></a>
             </div>
             
         </section>
         <section class="secondary section" id="secondary">
             <div class="wrapper">
-                <div class="container"  data-aos="fade-in">
+                <div class="container" data-aos="fade-right">
                     <h2 class="secondary__heading heading"><?php echo $lang['sec-header']?></h2>
                     <p class="secondary__para para"><?php echo $lang['sec-para']?></p>
                 </div>
-                <picture class="picture">
+                <picture class="picture" data-aos="fade-left">
                     <img class="secondary__illustration illustration" loading="lazy" src="img/illustrasions/healthy_habit.svg" alt="Illustration about working out. Source from unDraw.com">
                 </picture>
             </div>
         </section>
         <section class="tertiary section" id="about">
             <h2 class="tertiary__heading heading"><?php echo $lang['ter-header']?></h2>
-            <div class="tertiary__box">
+            <div class="tertiary__box" data-aos="fade-up">
                 <picture class="picture tertiary__picture">
                     <img class="img tertiary__img" loading="lazy" src="img/pictures/markus-big.jpg" alt="A picture about me!" class="tertiary__box__img">
                 </picture>
@@ -77,10 +78,10 @@
         </section>
         <section class="quaternary section" id="pricing">
             <div class="wrapper">
-            <picture class="picture">
+            <picture class="picture" data-aos="fade-right">
                 <img class="quaternary__illustration illustration" loading="lazy" src="img/illustrasions/credit_card.svg" alt="Illustration about paying with credit card. Source from unDraw.com">
             </picture>
-            <div class="container" data-aos="fade-in">
+            <div class="container" data-aos="fade-left">
             <h2 class="quaternary__heading heading"><?php echo $lang['qua-header']?></h2>
             <p class="quaternary__para para"><?php echo $lang['qua-para']?></p><br>
             <div class="quaternary__lists">
@@ -101,7 +102,7 @@
             </div>
             </div>
         </section>
-        <section class="contact section" id="contact">
+        <section class="contact section" id="contact" data-aos="fade-up">
             <div class="wrapper">
                 <h2 class="contact__heading heading"><?php echo $lang['qui-header']?></h2>
                 <a class="contact__link text-big" href="tel:+36703691271"><!-- <img class="contact__icon" src="img/icons/phone.svg" alt="Telephone icon"> -->+36 70 369 1271</a>
